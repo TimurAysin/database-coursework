@@ -1,0 +1,39 @@
+Id,Name,Shape Library,Page ID,Contained By,Group,Line Source,Line Destination,Source Arrow,Destination Arrow,Text Area 1,Text Area 2
+1,Page,,,,,,,,,Page 1,
+2,Class,UML,1,,,,,,,Сервер,"Server_ID: int, PK
+Count_Users: int
+Count_Chats: int"
+3,Class,UML,1,,,,,,,Чат (SCD 2),"Chat_ID: int, PK
+Chat_Name: text, Not NULL
+Count_Users: int
+Count_Media: int
+Count_Messages: int"
+4,Class,UML,1,,,,,,,Медиа,"Media_ID: PK, int
+Path: text
+Message_ID: int, FK"
+5,Class,UML,1,,,,,,,Пользователь,"User_ID: int, PK
+Name: text, NOT NULL
+Count_Chats: int"
+6,Class,UML,1,,,,,,,Платформа,"Platform_ID: int, PK, FK
+Platform_Name: text NOT NULL"
+7,Class,UML,1,,,,,,,Бот,"Bot_ID: int PK
+Bot_Name: text
+Chat_ID: int FK"
+8,Class,UML,1,,,,,,,Сообщение,"Message_ID: int, PK
+Text: text
+Chat_ID: int, FK
+"
+9,Class,UML,1,,,,,,,Устройство,"Device_ID: int PK
+User_ID: int FK
+Device_Name: text NOT NULL
+Platform_ID: int FK"
+10,Line,,1,,,6,9,CFN ERD Exactly One Arrow,CFN ERD One Or More Arrow,,
+11,Line,,1,,,9,5,CFN ERD Many Arrow,CFN ERD One Or More Arrow,,
+12,Line,,1,,,2,3,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,
+13,Line,,1,,,2,8,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,
+14,Line,,1,,,8,4,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,
+15,Line,,1,,,3,4,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,
+16,Line,,1,,,3,8,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,
+17,Line,,1,,,5,8,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,
+18,Line,,1,,,5,3,CFN ERD One Or More Arrow,CFN ERD Zero Or More Arrow,,
+19,Line,,1,,,3,7,CFN ERD One Or More Arrow,CFN ERD Zero Or More Arrow,,
