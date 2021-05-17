@@ -7,6 +7,8 @@ create table chat_user_schema.chat_user (
   count_chats INTEGER not null
 );
 
+
+/* CRUD */
 insert into chat_user_schema.chat_user values (1, 'Тimur', 100);
 insert into chat_user_schema.chat_user values (2, 'Max', 1);
 

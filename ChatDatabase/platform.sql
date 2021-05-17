@@ -6,6 +6,7 @@ create table device_platform_schema.device_platform (
     platform_name text not null
 );
 
+/* CRUD */
 insert into device_platform_schema.device_platform values (1, 'IOS');
 insert into device_platform_schema.device_platform values (2, 'Android');
 

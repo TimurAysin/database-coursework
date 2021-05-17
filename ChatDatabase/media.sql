@@ -9,6 +9,7 @@ create table chat_media_schema.chat_media (
     foreign key (message_id) references chat_schema.chat (chat_id) on delete cascade
 );
 
+/* CRUD */
 insert into chat_media_schema.chat_media values (1,'./cool_gif.gif', 1);
 insert into chat_media_schema.chat_media values (2,'./cool_gif2.gif', 2);
 

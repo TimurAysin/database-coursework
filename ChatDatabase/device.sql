@@ -10,6 +10,7 @@ create table user_device_schema.user_device (
     foreign key (platform_id) references device_platform_schema.device_platform(platform_id) on delete cascade
 );
 
+/* CRUD */
 insert into user_device_schema.user_device values (1,1,'IPHONE 10', 1);
 insert into user_device_schema.user_device values (2,2,'GOOGLE Pixel 5', 1);
 

@@ -7,6 +7,7 @@ create table chat_server_schema.chat_server (
   count_chats integer check (count_chats >= 0)
 );
 
+/* CRUD */
 insert into chat_server_schema.chat_server values (1, 0, 0);
 insert into chat_server_schema.chat_server values (2, 3, 3);
 

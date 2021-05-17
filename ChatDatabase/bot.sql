@@ -8,6 +8,7 @@ create table chat_bot_schema.chat_bot (
   foreign key (chat_id) references chat_schema.chat (chat_id)
 );
 
+/* CRUD */
 insert into chat_bot_schema.chat_bot values (1, 'bot1', 1);
 insert into chat_bot_schema.chat_bot values (2, 'bot2', 2);
 
@@ -17,3 +18,9 @@ copy chat_schema.chat from '/home/aysint/Documents/Projects/coursework-chat/pgcs
 select * from chat_bot_schema.chat_bot;
 update chat_bot_schema.chat_bot set bot_name = 'new_bot2' where bot_id = 2;
 delete from chat_bot_schema.chat_bot where bot_id = 2;
+
+insert into chat_bot_schema.chat_bot values (6, 'bot6', 1);
+insert into chat_bot_schema.chat_bot values (7, 'bot7', 1);
+
+insert into chat_bot_schema.chat_bot values (10, 'bot6', 2);
+insert into chat_bot_schema.chat_bot values (9, 'bot9', 2);

@@ -8,6 +8,7 @@ create table chat_message_schema.chat_message (
     foreign key (chat_id) references chat_schema.chat (chat_id) on delete cascade
 );
 
+/* CRUD */
 insert into chat_message_schema.chat_message values (1,'Hello',1);
 insert into chat_message_schema.chat_message values (2,'Go away!',2);
 
