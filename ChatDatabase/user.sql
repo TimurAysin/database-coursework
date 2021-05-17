@@ -15,3 +15,5 @@ insert into chat_user_schema.chat_user values (2, 'Max', 1);
 copy chat_user_schema.chat_user from '/home/aysint/Documents/Projects/coursework-chat/pgcsv/user.csv' with delimiter ',' csv header;
 
 select * from chat_user_schema.chat_user;
+update chat_user_schema.chat_user set name='King Timur' where name='Timur';
+delete from chat_user_schema.chat_user where user_id=2;

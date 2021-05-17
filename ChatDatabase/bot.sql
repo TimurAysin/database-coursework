@@ -15,3 +15,5 @@ insert into chat_bot_schema.chat_bot values (2, 'bot2', 2);
 copy chat_schema.chat from '/home/aysint/Documents/Projects/coursework-chat/pgcsv/bot.csv' with delimiter ',' csv header;
 
 select * from chat_bot_schema.chat_bot;
+update chat_bot_schema.chat_bot set bot_name = 'new_bot2' where bot_id = 2;
+delete from chat_bot_schema.chat_bot where bot_id = 2;

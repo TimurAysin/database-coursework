@@ -19,3 +19,5 @@ copy chat_schema.chat(chat_name, count_users, count_media, count_messages)
     from '/home/aysint/Documents/Projects/coursework-chat/pgcsv/chat_data.csv' with delimiter ',' csv header;
 
 select * from chat_schema.chat;
+update chat_schema.chat set count_users = 10 where chat_id = 2;
+delete from chat_schema.chat where chat_name = 'MyChat1';
