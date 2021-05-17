@@ -6,3 +6,11 @@ create table chat_server_schema.chat_server (
   count_users integer check (count_users >= 0),
   count_chats integer check (count_chats >= 0)
 );
+
+insert into chat_server_schema.chat_server values (1, 0, 0);
+insert into chat_server_schema.chat_server values (2, 3, 3);
+
+/* Загрузка из csv */
+copy chat_server_schema.chat_server from '/home/aysint/Documents/Projects/coursework-chat/pgcsv/server.csv' with delimiter ',' csv header;
+
+select * from chat_server_schema.chat_server;

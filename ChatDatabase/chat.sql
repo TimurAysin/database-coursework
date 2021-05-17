@@ -14,5 +14,8 @@ create table chat_schema.chat (
 insert into chat_schema.chat (chat_name) values ('MyChat1');
 insert into chat_schema.chat (chat_name, count_users, count_media, valid_from_dttm) values ('MyChat2', 1, 100, date('2021-01-01'));
 
+/* Загрузка из csv */
+copy chat_schema.chat(chat_name, count_users, count_media, count_messages)
+    from '/home/aysint/Documents/Projects/coursework-chat/pgcsv/chat_data.csv' with delimiter ',' csv header;
 
 select * from chat_schema.chat;
